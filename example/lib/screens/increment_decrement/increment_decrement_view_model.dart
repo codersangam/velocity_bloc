@@ -1,6 +1,6 @@
-part of 'home_imports.dart';
+import 'package:velocity_bloc/velocity_bloc.dart';
 
-class HomeData {
+class IncrementDecrementViewModel {
   VelocityBloc<int> incrementBloc = VelocityBloc<int>(0);
 
   increment(data) {
