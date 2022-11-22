@@ -1,7 +1,7 @@
 name: velocity_bloc
-description: A new Flutter package project.
-version: 0.0.1
-homepage:
+description: Minimalist and Easy State Management for Bloc Inspired from Dart Generics.
+version: 1.0.0
+homepage: https://velocitybloc.dev
 
 environment:
   sdk: ">=2.18.2 <3.0.0"
