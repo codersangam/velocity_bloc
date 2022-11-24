@@ -1,3 +1,3 @@
-## [1.0.0] - November 22, 2022
+## [1.0.1] - November 24, 2022
 
-- initial release to public.
+- demo, repository and examples added.

@@ -1,7 +1,10 @@
 name: velocity_bloc
 description: Minimalist and Easy State Management for Bloc Inspired from Dart Generics.
-version: 1.0.0
+version: 1.0.1
 homepage: https://velocitybloc.dev
+repository: https://github.com/codersangam/velocity_bloc
+examples: https://github.com/codersangam/velocity_bloc/tree/main/example
+demo: https://demo.velocitybloc.dev
 
 environment:
   sdk: ">=2.18.2 <3.0.0"
