@@ -18,7 +18,7 @@ Future<void> main() async {
       ),
       child: BlocProvider(
         create: (context) => LangCubit(),
-        child: DevicePreview(builder: (context) => MyApp()),
+        child: MyApp(),
       ),
     ),
   );
@@ -40,15 +40,20 @@ class MyApp extends StatelessWidget {
       ],
       child: BlocBuilder<LangCubit, LangState>(
         builder: (context, state) {
-          return MaterialApp.router(
-            title: 'Velocity Bloc',
-            theme: ThemeData(
-              primarySwatch: Colors.deepPurple,
-              fontFamily: GoogleFonts.poppins().fontFamily,
+          return DevicePreview(
+            builder: (context) => MaterialApp.router(
+              title: 'Velocity Bloc',
+              theme: ThemeData(
+                primarySwatch: Colors.deepPurple,
+                fontFamily: GoogleFonts.poppins().fontFamily,
+              ),
+              useInheritedMediaQuery: true,
+              locale: DevicePreview.locale(context),
+              builder: DevicePreview.appBuilder,
+              debugShowCheckedModeBanner: false,
+              routerDelegate: _appRouter.delegate(),
+              routeInformationParser: _appRouter.defaultRouteParser(),
             ),
-            debugShowCheckedModeBanner: false,
-            routerDelegate: _appRouter.delegate(),
-            routeInformationParser: _appRouter.defaultRouteParser(),
           );
         },
       ),
