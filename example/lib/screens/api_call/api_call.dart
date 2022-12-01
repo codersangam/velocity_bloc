@@ -18,15 +18,18 @@ class _ApiCallState extends State<ApiCall> {
       ),
       body: Column(
         children: [
-          20.heightBox,
-          "Get Products".text.bold.xl.make().onTap(
-            () {
+          InkWell(
+            onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const Products()));
             },
+            child: ListTile(
+              leading: "Get Products".text.bold.xl.make(),
+              trailing: const Icon(Icons.arrow_forward_ios, color: Colors.grey),
+            ),
           ),
         ],
-      ).pSymmetric(h: 15),
+      ),
     );
   }
 }

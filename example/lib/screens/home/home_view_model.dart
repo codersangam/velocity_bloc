@@ -6,6 +6,12 @@ class HomeViewModel {
       screenName: "Increment Decrement",
     ),
     HomeModel(
+      screenName: "Check Box",
+    ),
+    HomeModel(
+      screenName: "Show Hide Data",
+    ),
+    HomeModel(
       screenName: "API Call",
     ),
   ];

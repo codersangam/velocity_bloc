@@ -16,23 +16,17 @@ class HomeScreen extends StatelessWidget {
           return InkWell(
             onTap: () {
               if (index == 0) {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => IncrementDecrement(
-                      title: data.screenName,
-                    ),
-                  ),
-                );
+                AutoRouter.of(context)
+                    .push(IncrementDecrementRoute(title: data.screenName));
+              } else if (index == 1) {
+                AutoRouter.of(context)
+                    .push(MyCheckboxRoute(title: data.screenName));
+              } else if (index == 2) {
+                AutoRouter.of(context)
+                    .push(ShowHideDataRoute(title: data.screenName));
               } else {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => ApiCall(
-                      title: data.screenName,
-                    ),
-                  ),
-                );
+                AutoRouter.of(context)
+                    .push(ApiCallRoute(title: data.screenName));
               }
             },
             child: ListTile(

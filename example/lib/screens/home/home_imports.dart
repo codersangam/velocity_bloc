@@ -1,6 +1,6 @@
-import 'package:example/screens/api_call/api_call_imports.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:example/router/router_imports.gr.dart';
 import 'package:example/screens/home/home_model.dart';
-import 'package:example/screens/increment_decrement/increment_decrement_imports.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
