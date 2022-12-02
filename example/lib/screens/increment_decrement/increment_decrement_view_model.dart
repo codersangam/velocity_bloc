@@ -1,15 +1,15 @@
 import 'package:velocity_bloc/velocity_bloc.dart';
 
 class IncrementDecrementViewModel {
-  VelocityBloc<int> incrementBloc = VelocityBloc<int>(0);
+  VelocityBloc<int> counterBloc = VelocityBloc<int>(0);
 
   increment(data) {
     data++;
-    incrementBloc.onUpdateData(data);
+    counterBloc.onUpdateData(data);
   }
 
   decrement(data) {
     data--;
-    incrementBloc.onUpdateData(data);
+    counterBloc.onUpdateData(data);
   }
 }
