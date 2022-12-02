@@ -1,4 +1,3 @@
-## [1.1.0] - November 28, 2022
+## [1.1.1] - December 02, 2022
 
-- demo, repository and examples added.
-- fixed disapper of demo during change of orientation of devices.
+- check box and show and hide data examples added.
