@@ -10,6 +10,7 @@ class MyCheckbox extends StatefulWidget {
 }
 
 class _MyCheckboxState extends State<MyCheckbox> {
+  /// Creating an Instance of controller or view_model
   MyCheckboxViewModel myCheckboxViewModel = MyCheckboxViewModel();
 
   @override
@@ -26,8 +27,11 @@ class _MyCheckboxState extends State<MyCheckbox> {
                 bloc: myCheckboxViewModel.isChecked,
                 builder: (context, state) {
                   return Checkbox(
+                    ///state.data holds the current state of checkbox
                     value: state.data,
                     onChanged: (value) {
+                      ///when clicked on checkbox, checkbox is updtaed to false if true or true if it is false.
+                      ///toggle() handles if true then false, if false then true.
                       myCheckboxViewModel.isChecked
                           .onUpdateData(state.data.toggle());
                     },

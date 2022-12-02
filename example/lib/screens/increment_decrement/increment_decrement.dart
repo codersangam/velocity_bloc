@@ -10,6 +10,7 @@ class IncrementDecrement extends StatefulWidget {
 }
 
 class _IncrementDecrementState extends State<IncrementDecrement> {
+  /// Creating an Instance of controller or view_model
   IncrementDecrementViewModel incrementDecrementViewModel =
       IncrementDecrementViewModel();
   @override
@@ -29,6 +30,8 @@ class _IncrementDecrementState extends State<IncrementDecrement> {
                   'You have pushed the button this many times:',
                 ),
                 const SizedBox(height: 20),
+
+                ///state.data holds the current state.
                 Text(
                   state.data.toString(),
                   style: Theme.of(context).textTheme.headline4,
@@ -38,6 +41,7 @@ class _IncrementDecrementState extends State<IncrementDecrement> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ElevatedButton.icon(
+                      ///Triggering the increment function after tapping on button
                       onPressed: () =>
                           incrementDecrementViewModel.increment(state.data),
                       label: const Text("Increment"),
@@ -45,6 +49,7 @@ class _IncrementDecrementState extends State<IncrementDecrement> {
                     ),
                     const SizedBox(width: 20),
                     ElevatedButton.icon(
+                      ///Triggering the increment function after tapping on button
                       onPressed: () =>
                           incrementDecrementViewModel.decrement(state.data),
                       label: const Text("Decrement"),

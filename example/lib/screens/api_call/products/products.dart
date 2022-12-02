@@ -8,6 +8,7 @@ class Products extends StatefulWidget {
 }
 
 class _ProductsState extends State<Products> {
+  /// Creating an Instance of controller or view_model and calling the fetchProducts() in initState().
   late ProductsViewModel productsViewModel;
 
   @override
@@ -27,15 +28,19 @@ class _ProductsState extends State<Products> {
           VelocityState<ProductsModel?>>(
         bloc: productsViewModel.productsBloc,
         builder: (context, state) {
+          /// state is velocityinitialstate then show circular progress indicator.
           if (state is VelocityInitialState) {
             return const CircularProgressIndicator.adaptive().centered();
           } else {
+            /// state has data then show below UI.
             return GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 childAspectRatio: 0.7,
                 mainAxisSpacing: 20,
               ),
+
+              ///state.data holds current state data of products
               itemCount: state.data!.products!.length,
               itemBuilder: (context, index) {
                 var data = state.data!.products![index];
