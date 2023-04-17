@@ -1,5 +1,6 @@
 part of 'my_checkbox_imports.dart';
 
+@RoutePage()
 class MyCheckbox extends StatefulWidget {
   const MyCheckbox({super.key, required this.title});
 

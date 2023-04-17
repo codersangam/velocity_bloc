@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'bloc/lang_cubit/lang_cubit.dart';
 import 'repo/repository.dart';
-import 'router/router_imports.gr.dart';
+import 'router/router_imports.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -51,8 +51,7 @@ class MyApp extends StatelessWidget {
               locale: DevicePreview.locale(context),
               builder: DevicePreview.appBuilder,
               debugShowCheckedModeBanner: false,
-              routerDelegate: _appRouter.delegate(),
-              routeInformationParser: _appRouter.defaultRouteParser(),
+              routerConfig: _appRouter.config(),
             ),
           );
         },

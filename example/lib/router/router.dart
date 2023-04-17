@@ -1,12 +1,17 @@
 part of 'router_imports.dart';
 
-@AdaptiveAutoRouter(
-  routes: <AutoRoute>[
-    AutoRoute(page: HomeScreen, initial: true),
-    AutoRoute(page: IncrementDecrement),
-    AutoRoute(page: MyCheckbox),
-    AutoRoute(page: ShowHideData),
-    AutoRoute(page: ApiCall),
-  ],
-)
-class $AppRouter {}
+@AutoRouterConfig(replaceInRouteName: "Route")
+class AppRouter extends $AppRouter {
+  @override
+  RouteType get defaultRouteType => const RouteType.material();
+
+  @override
+  List<AutoRoute> get routes => [
+        AutoRoute(page: HomeRoute.page, path: "/"),
+        AutoRoute(page: IncrementDecrementRoute.page),
+        AutoRoute(page: MyCheckboxRoute.page),
+        AutoRoute(page: ShowHideDataRoute.page),
+        AutoRoute(page: ApiCallRoute.page),
+        AutoRoute(page: ProductsRoute.page)
+      ];
+}

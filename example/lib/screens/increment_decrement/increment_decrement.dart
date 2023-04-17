@@ -1,5 +1,6 @@
 part of 'increment_decrement_imports.dart';
 
+@RoutePage()
 class IncrementDecrement extends StatefulWidget {
   const IncrementDecrement({super.key, required this.title});
 
@@ -34,7 +35,7 @@ class _IncrementDecrementState extends State<IncrementDecrement> {
                 ///state.data holds the current state.
                 Text(
                   state.data.toString(),
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
                 const SizedBox(height: 20),
                 Row(

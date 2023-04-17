@@ -1,3 +1,5 @@
-## [1.1.2] - December 24, 2022
+## [1.1.3] - April 17, 2022
 
-- Docs Updated.
+- Auto Route Migrated to v6.0
+- Special Comments Added to States and Methods.
+- Bugs Fixed.

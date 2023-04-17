@@ -1,5 +1,6 @@
 part of 'api_call_imports.dart';
 
+@RoutePage()
 class ApiCall extends StatefulWidget {
   const ApiCall({super.key, required this.title});
 

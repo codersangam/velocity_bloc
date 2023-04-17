@@ -1,5 +1,6 @@
 part of 'show_hide_data_imports.dart';
 
+@RoutePage()
 class ShowHideData extends StatefulWidget {
   const ShowHideData({super.key, required this.title});
 

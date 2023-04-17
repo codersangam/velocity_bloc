@@ -1,5 +1,6 @@
 part of 'products_imports.dart';
 
+@RoutePage()
 class Products extends StatefulWidget {
   const Products({super.key});
 
@@ -31,7 +32,9 @@ class _ProductsState extends State<Products> {
           /// state is velocityinitialstate then show circular progress indicator.
           if (state is VelocityInitialState) {
             return const CircularProgressIndicator.adaptive().centered();
-          } else {
+
+            /// state is velocityupdatestate then display data.
+          } else if (state is VelocityUpdateState) {
             /// state has data then show below UI.
             return GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -78,7 +81,12 @@ class _ProductsState extends State<Products> {
                 ).pSymmetric(h: 10);
               },
             ).pOnly(top: 10);
+
+            /// state is error/exception state then show error/exception message.
+          } else if (state is VelocityFailedState) {
+            return state.error.text.makeCentered();
           }
+          return const SizedBox();
         },
       ),
     );

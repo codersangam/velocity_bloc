@@ -1,7 +1,8 @@
 part of 'home_imports.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+@RoutePage()
+class Home extends StatelessWidget {
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
