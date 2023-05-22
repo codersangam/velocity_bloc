@@ -1,5 +1,5 @@
-## [1.1.3] - April 17, 2022
+## [1.1.4] - May 22, 2022
 
-- Auto Route Migrated to v6.0
-- Special Comments Added to States and Methods.
+- Special Comments Added on 3 Languages to States and Methods.
+- Updated to Latest Flutter Version.
 - Bugs Fixed.

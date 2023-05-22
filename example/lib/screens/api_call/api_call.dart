@@ -16,6 +16,7 @@ class _ApiCallState extends State<ApiCall> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: Column(
         children: [
@@ -24,9 +25,9 @@ class _ApiCallState extends State<ApiCall> {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const Products()));
             },
-            child: ListTile(
-              leading: "Get Products".text.bold.xl.make(),
-              trailing: const Icon(Icons.arrow_forward_ios, color: Colors.grey),
+            child: const ListTile(
+              leading: Text("Get Products"),
+              trailing: Icon(Icons.arrow_forward_ios, color: Colors.grey),
             ),
           ),
         ],

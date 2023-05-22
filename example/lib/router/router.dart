@@ -7,7 +7,7 @@ class AppRouter extends $AppRouter {
 
   @override
   List<AutoRoute> get routes => [
-        AutoRoute(page: HomeRoute.page, path: "/"),
+        AutoRoute(page: HomeRoute.page, path: "/", initial: true),
         AutoRoute(page: IncrementDecrementRoute.page),
         AutoRoute(page: MyCheckboxRoute.page),
         AutoRoute(page: ShowHideDataRoute.page),

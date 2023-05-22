@@ -19,6 +19,7 @@ class _IncrementDecrementState extends State<IncrementDecrement> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: BlocBuilder<VelocityBloc<int>, VelocityState<int>>(
         bloc: incrementDecrementViewModel.counterBloc,
@@ -26,12 +27,7 @@ class _IncrementDecrementState extends State<IncrementDecrement> {
           return Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                const Text(
-                  'You have pushed the button this many times:',
-                ),
-                const SizedBox(height: 20),
-
+              children: [
                 ///state.data holds the current state.
                 Text(
                   state.data.toString(),

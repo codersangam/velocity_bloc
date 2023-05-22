@@ -22,8 +22,23 @@ In your library add the following import:
 import 'package:velocity_bloc/velocity_bloc.dart';
 ```
 
+## Summary
+`.onUpdateData(dynamic data)` - updates the bloc with new data on states. 
+
+`.onFailedResponse(String error)` - holds the failed responses/exceptions as String. 
+
+`VelocityInitialState` - Initial state of the bloc. 
+
+`VelocityUpdateState` - Loaded/Updated state of the bloc.
+
+`VelocityFailedState` - Failed/Error state of the bloc.
+
+<br>
+
+
 For help getting started with Flutter, view the online [documentation](https://velocitybloc.dev/docs/install).
 
+<br>
 
 ## License
 

@@ -19,6 +19,7 @@ class _MyCheckboxState extends State<MyCheckbox> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: Column(
         children: [
@@ -33,13 +34,12 @@ class _MyCheckboxState extends State<MyCheckbox> {
                     onChanged: (value) {
                       ///when clicked on checkbox, checkbox is updtaed to false if true or true if it is false.
                       ///toggle() handles if true then false, if false then true.
-                      myCheckboxViewModel.isChecked
-                          .onUpdateData(state.data.toggle());
+                      myCheckboxViewModel.isChecked.onUpdateData(!state.data);
                     },
                   );
                 },
               ),
-              "My Checkbox".text.make(),
+              const Text("My Checkbox"),
             ],
           ),
         ],

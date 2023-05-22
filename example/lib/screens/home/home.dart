@@ -9,6 +9,7 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Velocity Bloc"),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: ListView.builder(
         itemCount: HomeViewModel.screensList.length,
@@ -31,7 +32,10 @@ class Home extends StatelessWidget {
               }
             },
             child: ListTile(
-              leading: data.screenName.text.bold.xl.make(),
+              leading: Text(
+                data.screenName,
+                style: const TextStyle(fontWeight: FontWeight.bold),
+              ),
               trailing: const Icon(Icons.arrow_forward_ios, color: Colors.grey),
             ),
           );
