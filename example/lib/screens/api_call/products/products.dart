@@ -74,7 +74,7 @@ class _ProductsState extends State<Products> {
                           children: [
                             const SizedBox(height: 10),
                             Text(
-                              data.brand!,
+                              data.brand ?? "",
                               maxLines: 1,
                               style: const TextStyle(
                                 overflow: TextOverflow.ellipsis,

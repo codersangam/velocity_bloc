@@ -1,6 +1,6 @@
 part of 'velocity_cubit.dart';
 
-abstract class VelocityState<T> extends Equatable {
+sealed class VelocityState<T> extends Equatable {
   final T data;
   final bool changed;
   final String error;
@@ -29,8 +29,7 @@ class VelocityInitialState<T> extends VelocityState<T> {
 ///
 /// You can display updated data here.
 class VelocityUpdateState<T> extends VelocityState<T> {
-  const VelocityUpdateState(T data, bool changed, String error)
-      : super(data, changed, error);
+  const VelocityUpdateState(super.data, super.changed, super.error);
 
   @override
   List<Object> get props => [changed];
@@ -44,8 +43,7 @@ class VelocityUpdateState<T> extends VelocityState<T> {
 ///
 /// You can even display custom message here.
 class VelocityFailedState<T> extends VelocityState<T> {
-  const VelocityFailedState(T data, bool changed, String error)
-      : super(data, changed, error);
+  const VelocityFailedState(super.data, super.changed, super.error);
 
   @override
   List<Object> get props => [changed, error];

@@ -1,5 +1,4 @@
-## [1.1.4] - May 22, 2022
+## [1.2.0] - Jun 20, 2024
 
-- Special Comments Added on 3 Languages to States and Methods.
-- Updated to Latest Flutter Version.
-- Bugs Fixed.
+- upgraded to latest dependencies
+- v3 compatability, v2 deprecated
